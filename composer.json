@@ -1,0 +1,22 @@
+{
+    "name": "logiek/http-status-codes",
+    "description": "Constants enumerating the HTTP Status Codes. Based on the HTTP Status Code Registry.",
+    "keywords": ["http", "status", "codes"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Logiek\\Http\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Logiek\\Http\\Tests\\": "tests/"
+        }
+    }
+}
