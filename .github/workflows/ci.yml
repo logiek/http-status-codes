@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Composer dependencies
+        uses: php-actions/composer@v6
+        with:
+          php_version: 8.0
+          version: 2
+          args: --verbose --prefer-dist --no-progress --no-interaction --optimize-autoloader
+      - name: Run tests
+        run: ./vendor/bin/phpunit tests
