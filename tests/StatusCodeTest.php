@@ -5,20 +5,20 @@ declare(strict_types=1);
 namespace Logiek\Http\Tests;
 
 use InvalidArgumentException;
-use Logiek\Http\StatusCodes;
+use Logiek\Http\StatusCode;
 use PHPUnit\Framework\TestCase;
 
-final class StatusCodesTest extends TestCase
+final class StatusCodeTest extends TestCase
 {
     public function testIsExistentReasonPhraseOnExistentStatusCode()
     {
-        $this->assertEquals('OK', StatusCodes::getReasonPhrase(StatusCodes::HTTP_OK));
+        $this->assertEquals('OK', StatusCode::getReasonPhrase(StatusCode::HTTP_OK));
     }
 
     public function testIsNonExistentReasonPhraseOnNonExistentStatusCode()
     {
         $this->expectException(InvalidArgumentException::class);
 
-        StatusCodes::getReasonPhrase(rand(600, getrandmax()));
+        StatusCode::getReasonPhrase(rand(600, getrandmax()));
     }
 }

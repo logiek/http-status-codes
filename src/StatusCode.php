@@ -6,7 +6,7 @@ namespace Logiek\Http;
 
 use InvalidArgumentException;
 
-abstract class StatusCodes
+abstract class StatusCode
 {
     public const HTTP_CONTINUE = 100; // RFC7231
 

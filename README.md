@@ -5,11 +5,12 @@
 Constants enumerating the HTTP Status Codes. Based on the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xml).
 
 ## Usage
-```php
-use Logiek\Http\StatusCodes;
 
-echo StatusCodes::HTTP_OK; // 200
-echo StatusCodes::getReasonPhrase(StatusCodes::HTTP_OK); // OK
+```php
+use Logiek\Http\StatusCode;
+
+echo StatusCode::HTTP_OK; // 200
+echo StatusCode::getReasonPhrase(StatusCode::HTTP_OK); // OK
 ```
 
 ## License
