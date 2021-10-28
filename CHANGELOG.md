@@ -1,7 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/logiek/http-status-codes/compare/master...1.1.0)
+## [Unreleased](https://github.com/logiek/http-status-codes/compare/1.1.1...master)
+
+## [1.1.1 (2021-10-28)](https://github.com/logiek/http-status-codes/compare/1.1.0...1.1.1)
+
+### Added
+- Added changelog.
 
 ## [1.1.0 (2021-10-28)](https://github.com/logiek/http-status-codes/compare/1.0.1...1.1.0)
 
