@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Logiek\Http;
 
-use InvalidArgumentException;
+use Logiek\Http\Exceptions\InvalidReasonPhraseException;
+use Logiek\Http\Exceptions\InvalidStatusCodeException;
 
 class StatusCode
 {
@@ -389,7 +390,18 @@ class StatusCode
             return self::get()[$statusCode];
         }
 
-        throw new InvalidArgumentException('The HTTP status code "' . $statusCode . '" is not valid.');
+        throw new InvalidStatusCodeException();
+    }
+
+    public static function getStatusCode(string $reasonPhrase): int
+    {
+        $statusCode = array_search($reasonPhrase, self::get(), true);
+
+        if ($statusCode) {
+            return $statusCode;
+        }
+
+        throw new InvalidReasonPhraseException();
     }
 
     public static function get(): array

@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Logiek\Http\Tests;
 
-use InvalidArgumentException;
+use Logiek\Http\Exceptions\InvalidReasonPhraseException;
+use Logiek\Http\Exceptions\InvalidStatusCodeException;
 use Logiek\Http\StatusCode;
 use PHPUnit\Framework\TestCase;
 
@@ -20,10 +21,32 @@ class StatusCodeTest extends TestCase
         $this->assertIsString(StatusCode::getReasonPhrase(StatusCode::HTTP_OK));
     }
 
-    public function testExpectExceptionOnGetReasonPhraseWithNonExistentStatusCode(): void
+    public function testGetReasonPhrase()
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->assertEquals('Not Found', StatusCode::getReasonPhrase(404));
+    }
+
+    public function testExpectInvalidStatusCodeExceptionOnGetReasonPhraseWithNonExistentStatusCode(): void
+    {
+        $this->expectException(InvalidStatusCodeException::class);
 
         StatusCode::getReasonPhrase(rand(600, getrandmax()));
+    }
+
+    public function testIsIntOnGetStatusCode(): void
+    {
+        $this->assertIsInt(StatusCode::getStatusCode('Not Found'));
+    }
+
+    public function testGetStatusCode()
+    {
+        $this->assertEquals(404, StatusCode::getStatusCode('Not Found'));
+    }
+
+    public function testExpectInvalidReasonPhraseExceptionOnGetStatusCodeWithNonExistentReasonPhrase()
+    {
+        $this->expectException(InvalidReasonPhraseException::class);
+
+        StatusCode::getStatusCode('Lorem ipsum');
     }
 }

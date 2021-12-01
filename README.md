@@ -20,6 +20,7 @@ use Logiek\Http\StatusCode;
 StatusCode::HTTP_OK; // 200
 StatusCode::get(); // [100 => 'Continue', 101 => 'Switching Protocols', ...]
 StatusCode::getReasonPhrase(StatusCode::HTTP_OK); // OK
+StatusCode::getStatusCode('Not Found'); // 404
 ```
 
 ## Changelog
