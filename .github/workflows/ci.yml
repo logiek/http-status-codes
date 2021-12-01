@@ -14,4 +14,4 @@ jobs:
           version: 2
           args: --verbose --prefer-dist --no-progress --no-interaction --optimize-autoloader
       - name: Run tests
-        run: ./vendor/bin/phpunit tests
+        run: ./vendor/bin/phpunit

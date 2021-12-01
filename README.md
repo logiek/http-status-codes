@@ -4,14 +4,36 @@
 
 Constants enumerating the HTTP Status Codes. Based on the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xml).
 
+## Installation
+
+You can install the package via Composer:
+
+``` bash
+composer require logiek/http-status-codes
+```
+
 ## Usage
 
 ```php
 use Logiek\Http\StatusCode;
 
-echo StatusCode::HTTP_OK; // 200
-echo StatusCode::getReasonPhrase(StatusCode::HTTP_OK); // OK
+StatusCode::HTTP_OK; // 200
+StatusCode::get(); // [100 => 'Continue', 101 => 'Switching Protocols', ...]
+StatusCode::getReasonPhrase(StatusCode::HTTP_OK); // OK
+```
+
+## Changelog
+
+Please see the [CHANGELOG](CHANGELOG.md) for more information about recent changes.
+
+## Testing
+
+Run the tests with:
+
+``` bash
+composer test
 ```
 
 ## License
+
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

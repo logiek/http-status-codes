@@ -2,8 +2,9 @@
 # Application
 # ===========================
 
-vendor
-composer.lock
+/vendor
+/.phpunit.result.cache
+/composer.lock
 
 # ===========================
 # IDE

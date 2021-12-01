@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased](https://github.com/logiek/http-status-codes/compare/1.1.2...master)
 
+### Added
+- Added function to retrieve all status codes with their corresponding reason phrase.
+
 ## [1.1.2 (2021-10-28)](https://github.com/logiek/http-status-codes/compare/1.1.1...1.1.2)
 
 ### Added

@@ -8,14 +8,19 @@ use InvalidArgumentException;
 use Logiek\Http\StatusCode;
 use PHPUnit\Framework\TestCase;
 
-final class StatusCodeTest extends TestCase
+class StatusCodeTest extends TestCase
 {
-    public function testIsExistentReasonPhraseOnExistentStatusCode()
+    public function testIsArrayOnGet(): void
     {
-        $this->assertEquals('OK', StatusCode::getReasonPhrase(StatusCode::HTTP_OK));
+        $this->assertIsArray(StatusCode::get());
     }
 
-    public function testIsNonExistentReasonPhraseOnNonExistentStatusCode()
+    public function testIsStringOnGetReasonPhrase(): void
+    {
+        $this->assertIsString(StatusCode::getReasonPhrase(StatusCode::HTTP_OK));
+    }
+
+    public function testExpectExceptionOnGetReasonPhraseWithNonExistentStatusCode(): void
     {
         $this->expectException(InvalidArgumentException::class);
 
