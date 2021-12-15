@@ -384,6 +384,9 @@ class StatusCode
         self::HTTP_NETWORK_AUTHENTICATION_REQUIRED => 'Network Authentication Required',
     ];
 
+    /**
+     * @throws InvalidStatusCodeException
+     */
     public static function getReasonPhrase(int $statusCode): string
     {
         if (isset(self::get()[$statusCode])) {
@@ -393,6 +396,9 @@ class StatusCode
         throw new InvalidStatusCodeException();
     }
 
+    /**
+     * @throws InvalidReasonPhraseException
+     */
     public static function getStatusCode(string $reasonPhrase): int
     {
         $statusCode = array_search($reasonPhrase, self::get(), true);
