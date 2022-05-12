@@ -21,7 +21,7 @@ class StatusCodeTest extends TestCase
         $this->assertIsString(StatusCode::getReasonPhrase(StatusCode::HTTP_OK));
     }
 
-    public function testGetReasonPhrase()
+    public function testGetReasonPhrase(): void
     {
         $this->assertEquals('Not Found', StatusCode::getReasonPhrase(404));
     }
@@ -38,12 +38,12 @@ class StatusCodeTest extends TestCase
         $this->assertIsInt(StatusCode::getStatusCode('Not Found'));
     }
 
-    public function testGetStatusCode()
+    public function testGetStatusCode(): void
     {
         $this->assertEquals(404, StatusCode::getStatusCode('Not Found'));
     }
 
-    public function testExpectInvalidReasonPhraseExceptionOnGetStatusCodeWithNonExistentReasonPhrase()
+    public function testExpectInvalidReasonPhraseExceptionOnGetStatusCodeWithNonExistentReasonPhrase(): void
     {
         $this->expectException(InvalidReasonPhraseException::class);
 

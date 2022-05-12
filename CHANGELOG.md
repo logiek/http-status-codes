@@ -1,7 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/logiek/http-status-codes/compare/1.2.0...master)
+## [Unreleased](https://github.com/logiek/http-status-codes/compare/1.3.0...master)
+
+## [1.3.0 (2022-05-12)](https://github.com/logiek/http-status-codes/compare/1.2.0...1.3.0)
+
+### Changed
+- Fixed strict type declaration on test methods.
 
 ## [1.2.0 (2021-10-28)](https://github.com/logiek/http-status-codes/compare/1.1.2...1.2.0)
 
