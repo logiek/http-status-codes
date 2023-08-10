@@ -1,7 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/logiek/http-status-codes/compare/1.3.0...master)
+## [Unreleased](https://github.com/logiek/http-status-codes/compare/1.4.0...master)
+
+## [1.4.0 (2023-08-10)](https://github.com/logiek/http-status-codes/compare/1.3.0...1.4.0)
+
+### Added
+- Added support for PHP 8.1 and 8.2.
 
 ## [1.3.0 (2022-05-12)](https://github.com/logiek/http-status-codes/compare/1.2.0...1.3.0)
 
