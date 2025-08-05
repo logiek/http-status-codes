@@ -1,3 +1,6 @@
+⚠️ THIS PACKAGE IS NO LONGER MAINTAINED ⚠️  
+This repository has been discontinued and is no longer receiving updates or support.  
+
 # http-status-codes
 
 [![Latest Stable Version](https://poser.pugx.org/logiek/http-status-codes/v/stable)](https://packagist.org/packages/logiek/http-status-codes) [![Total Downloads](https://poser.pugx.org/logiek/http-status-codes/downloads)](https://packagist.org/packages/logiek/http-status-codes) [![License](https://poser.pugx.org/logiek/http-status-codes/license)](https://packagist.org/packages/logiek/http-status-codes) [![PHP Version Require](http://poser.pugx.org/logiek/http-status-codes/require/php)](https://packagist.org/packages/logiek/http-status-codes)
